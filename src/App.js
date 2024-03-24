@@ -12,6 +12,16 @@ import ClipLoader from "react-spinners/ClipLoader";
 //5. 현재 위치 버튼을 누르면 다시 현재 위치 기반의 날씨가 나옴
 //6. 데이터를 들고 오는 동안 로딩 스피너가 나온다
 
+<div className="weekdays">
+  <div className="weekday monday">Monday</div>
+  <div className="weekday tuesday">Tuesday</div>
+  <div className="weekday wednesday">Wednesday</div>
+  <div className="weekday thursday">Thursday</div>
+  <div className="weekday friday">Friday</div>
+  <div className="weekday saturday">Saturday</div>
+  <div className="weekday sunday">Sunday</div>
+</div>
+
 function App() {
   const [weather, setWeather] = useState(null);
   const [city,setCity]=useState("");
@@ -63,8 +73,8 @@ function App() {
         </div>
         ):(
         <div className="container">
-      <WeatherBox weather={weather}/>
-      <WeatherButton cites={cites} setCity={setCity}/>
+      <WeatherBox weather={weather} />
+      <WeatherButton cites={cites} setCity={setCity} getCurrentLocation={getCurrentLocation} />
     </div>
     )}
     
