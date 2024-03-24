@@ -1,14 +1,21 @@
 import React from "react";
 import { Button } from 'react-bootstrap';
 
-const WeatherBox =()=>{
+const WeatherBox =({cites,setCity})=>{
+    console.log("cites?", cites);
     return(
         <div>
-            <Button variant="warning">Current</Button>{' '}
-            <Button variant="warning">Paris</Button>{' '}
-            <Button variant="warning">Tokyo</Button>{' '}
-            <Button variant="warning">Philippines</Button>{' '}
-            <Button variant="warning">Lisbon</Button>{' '}
+            <Button variant="warning">Current Location</Button>{' '}
+            
+            {cites.map((item, index)=>(
+                <Button 
+                variant="warning"
+                key={index}
+                onClick={()=>setCity(item)}
+                > 
+                    {item}
+                    </Button>
+            ))}
         </div>
     );
 };
