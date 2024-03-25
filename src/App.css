@@ -5,39 +5,38 @@ body{
   background-size: cover;
 }
 
-.container {
+.weather-card{
+  background-color: rgba(52,52,52,.7);
+    padding: 50px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    max-width: 700px;
+    width:100%;
+    height: 300px;
+}
+.main-container{
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  
+}
+.menu-container{
+  display: flex;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 60px;
+    max-width: 700px;
+    width:100%;
+   padding: 30px;
+   margin-top: 30px;
+
+}
+.menu-container Button{
+  margin-right:30px;
 }
 
-.weather-box {
-  border: 3px solid yellow;
-  padding: 50px;
-  border-radius: 30px;
-  background-color: rgba(154, 152, 152, 0.7);
-}
-
-.menu-container {
-  margin-top: 20px;
-}
-
-.menu-container .btn {
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  background-color: #ffc107; /* 버튼의 기본 배경색 */
-  color: white; /* 버튼 텍스트 색상 */
-  border: none;
-  transition: background-color 0.3s ease; /* 배경색 전환 효과 */
-}
-
-.menu-container .btn:hover {
-  background-color: #ff9800; /* 마우스 오버시 배경색 변경 */
-}
-
-.menu-container .btn.active {
-  background-color: #f07 !important; /* 선택된 버튼의 배경색 변경 */
+.menu-container Button:hover{
+  background-color: #ffc107;
 }
